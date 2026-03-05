@@ -1,0 +1,404 @@
+[
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "authentication",
+    "model": "users"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "authentication",
+    "model": "oauth"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "4h9o31dbbsmgmlw2bo0mpohh3rddiu68",
+  "fields": {
+    "session_data": ".eJxVzDkOwjAQheG7uMZWZuKVkp4zRGPPmLAokbJUiLuTSCmgft__3qqjdem7dZapu7M6K0yxomtFc7SsLXLUqQDoykxQUkXmrE6_WabylGFv-UHDbTRlHJbpns1OzLHO5jqyvC6H_Tvoae632lvJTfLIAJEoOkmhULUutMyNtAwhIpFsoEpFARccoFjvq-SSwKnPF1Y9QhU:1vyGeM:yeATdg8382JDeHGE__oFDuQc4wjLbUbhJ4aLhoA2DUU",
+    "expire_date": "2026-03-19T21:54:30.820Z"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add user",
+    "content_type": [
+      "authentication",
+      "users"
+    ],
+    "codename": "add_users"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change user",
+    "content_type": [
+      "authentication",
+      "users"
+    ],
+    "codename": "change_users"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete user",
+    "content_type": [
+      "authentication",
+      "users"
+    ],
+    "codename": "delete_users"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view user",
+    "content_type": [
+      "authentication",
+      "users"
+    ],
+    "codename": "view_users"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add o auth",
+    "content_type": [
+      "authentication",
+      "oauth"
+    ],
+    "codename": "add_oauth"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change o auth",
+    "content_type": [
+      "authentication",
+      "oauth"
+    ],
+    "codename": "change_oauth"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete o auth",
+    "content_type": [
+      "authentication",
+      "oauth"
+    ],
+    "codename": "delete_oauth"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view o auth",
+    "content_type": [
+      "authentication",
+      "oauth"
+    ],
+    "codename": "view_oauth"
+  }
+},
+{
+  "model": "authentication.users",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$xmNb8kjMCXJullrlpoizHu$dFRgsXmkMuFk7cB2FCuVCKn2yI9zcK7vusWr2XAx0uQ=",
+    "last_login": "2026-03-05T21:54:30Z",
+    "is_superuser": true,
+    "username": "midoghanam",
+    "first_name": "Mohammed",
+    "last_name": "Ahmed Ghanam",
+    "email": "midoghanam@hotmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-03-05T21:53:48Z",
+    "verified": false,
+    "created_at": "2026-03-05T21:53:48.914Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2026-03-05T21:54:40.986Z",
+    "user": [
+      "midoghanam"
+    ],
+    "content_type": [
+      "authentication",
+      "users"
+    ],
+    "object_id": "298f253e-d84d-42d8-9c11-fdda1c9f2ddb",
+    "object_repr": "midoghanam",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+  }
+}
+]

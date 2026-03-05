@@ -1,0 +1,7 @@
+Dump Data to JSON:
+$env:PYTHONUTF8=1
+$OutputEncoding = [System.Text.UTF8Encoding]::new()
+python manage.py dumpdata --natural-foreign --natural-primary --indent 2 -o full_data.json
+
+Load Data from JSON to db:
+python manage.py loaddata full_data.json
