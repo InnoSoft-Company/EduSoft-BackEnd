@@ -1,67 +1,40 @@
-from rest_framework_simplejwt.tokens import RefreshToken
-from urllib.parse import urlparse
+HostURL, locathost = "https://back-end.edusoft.midoghanam.site", "http://127.0.0.1:8000"
+WebSiteURL = "https://edusoft.midoghanam.site"
 
-HostURL = "https://www.midoghanam.site"
-WebSiteURL = "https://www.midoghanam.site"
-#CodeSpaceURL = "https://shiny-computing-machine-rjg65v5p4xxhp9q9-8000.app.github.dev"
+BaseURL = locathost
 
-def NowURL(request):
-  return request.scheme + "://" + request.get_host()
-
-def get_page_url(request):
-  referer = request.META.get('HTTP_REFERER', '')
-  return urlparse(referer).path if referer else '/'
-
-GoogleOAuth = {
-  'client_id': "168962013142-v1t0d4553e4n5evsd2lncbmavhfvqqqg.apps.googleusercontent.com",
-  'redirect_uri': f'{HostURL}/auth/oauth/google/callback/',
-  'scope': 'openid profile',
-  'response_type': 'code',
-  'access_type': 'offline',
-  'prompt': 'consent',
-  "client_secret": "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"
-}
-
-#params = {k: v for k, v in GoogleOAuth.items() if k != 'prompt'}
-
-GitHubOAuth = {
-  'client_id': 'Ov23li1G33o7ii85wPbM',
-  'redirect_uri': f'{HostURL}/auth/oauth/github/callback/',
-  'scope': 'read:user',
-  'allow_signup': 'true',
-  'client_secret': "afdbacf38638f772ae2de5b01a90e8e1a1e080af",
-}
-
-BaseURLs = {
-  "GoogleOAuth": {
-    "auth": "https://accounts.google.com/o/oauth2/v2/auth",
-    "getTokens": "https://oauth2.googleapis.com/token",
-    "emailAPI": {
-      "send": "https://gmail.googleapis.com/gmail/v1/users/me/messages/send",
+OAuth = {
+  "GitHub": {
+    "AppID": 1294780,
+    "PrivateKey": "SHA256:CbQyqVXiuPzDGDnLPEvXdc6MpWa4yd3aM/GuIRmak80=",
+    "ClientID": "Iv23liIiuqtJ1SLlWVWH",
+    "ClientSecret": "bd1597ac086e2199ee11b9a8cf0134a0b948caad",
+    "urls": {
+      "auth": "https://github.com/login/oauth/authorize",
+      "token": "https://github.com/login/oauth/access_token",
+      "userinfo": "https://api.github.com/user",
     },
-    "user": {
-      "info": "https://www.googleapis.com/oauth2/v3/userinfo",
+    "scops": {
+      "login": "read:user user:email",
+      "signup": "read:user user:email",
+      "add_account": "read:user user:email user:follow user write:discussion read:discussion admin:org read:org admin:public_key write:public_key read:public_key admin:gpg_key write:gpg_key read:gpg_key repo repo:status repo_deployment public_repo repo:invite security_events gist notifications workflow codespace write:packages read:packages delete:packages admin:repo_hook delete_repo",
     },
-
   },
-  "GitHubOAuth": {
-    "auth": "https://github.com/login/oauth/authorize",
-    "getTokens": "https://github.com/login/oauth/access_token",
-    'users': "https://api.github.com/user",
-    "emails": "https://api.github.com/user/emails",
+  "Google": {
+    "ClientID": "1008528097851-bjiokj2qrfp2c79k6qt3knmcs5j3cvnb.apps.googleusercontent.com",
+    "ProjectID": "gen-lang-client-0896922511",
+    "ClientSecret": "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",
+    "urls": {
+      "auth": "https://accounts.google.com/o/oauth2/auth",
+      "token": "https://oauth2.googleapis.com/token",
+      "userinfo": 'https://www.googleapis.com/oauth2/v3/userinfo',
+      "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    },
+    "scops": {
+      "login": "openid email profile",
+      "signup": "openid email profile",
+      "add_account": "openid email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/drive.readonly https://www.googleapis.com/auth/drive.metadata https://www.googleapis.com/auth/drive.metadata.readonly https://www.googleapis.com/auth/calendar https://www.googleapis.com/auth/calendar.readonly https://www.googleapis.com/auth/contacts https://www.googleapis.com/auth/contacts.readonly https://www.googleapis.com/auth/gmail.readonly https://www.googleapis.com/auth/gmail.modify https://www.googleapis.com/auth/gmail.send https://www.googleapis.com/auth/youtube https://www.googleapis.com/auth/youtube.readonly https://www.googleapis.com/auth/photoslibrary.readonly https://www.googleapis.com/auth/photoslibrary.appendonly https://www.googleapis.com/auth/tasks",
+    },
   },
 }
 
-MainVars = {
-  "midoghanam": {
-    "email": "zentrixproject@gmail.com",
-    "gmail": {
-      "refresh_token": "",
-    }
-  }
-}
-
-_midoghanam_access_token = {
-  "token": None,
-  "expires_at": 0
-}
