@@ -24,6 +24,7 @@ CSRF_TRUSTED_ORIGINS = [
 
 INSTALLED_APPS = [
   'django.contrib.admin', 'django.contrib.auth', 'django.contrib.contenttypes', 'django.contrib.messages', 'django.contrib.staticfiles', 'django.contrib.sessions',
+  'drf_yasg',
   'authentication', 'core', 
 ]
 
@@ -43,7 +44,7 @@ AUTH_USER_MODEL = 'authentication.Users'
 TEMPLATES = [
   {
       'BACKEND': 'django.template.backends.django.DjangoTemplates',
-      'DIRS': [ BASE_DIR / 'website/HTML' ],
+      'DIRS': [],
       'APP_DIRS': True,
       'OPTIONS': {
           'context_processors': [

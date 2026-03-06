@@ -5,20 +5,19 @@ from rest_framework import status, permissions
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from django.contrib.auth import login
-from . import models as m
 from core import utils
 
 User = get_user_model()
-OTP_EXPIRY_SECONDS = 300
 
 class LoginOTPAPIView(APIView):
   permission_classes = (permissions.AllowAny,)
   def post(self, request):
     serializer = LoginSerializer(data=request.data)
     serializer.is_valid(raise_exception=True)
-    user = authenticate(request, username=serializer.validated_data["username"], password=serializer.validated_data["password"])
+    data = serializer.validated_data
+    if data["loginWay"] == "email": user = authenticate(request, email=data["email"], password=data["password"])
+    else: user = authenticate(request, username=data["username"], password=data["password"])
     if not user: return Response({"status": False, "message": "Username or password is incorrect."}, status=401)
-    data = UserSerializer(user).data
     login(request, user)
     return Response({"status": True, "data": data, "tokens": utils.getUserTokens(user)})
 

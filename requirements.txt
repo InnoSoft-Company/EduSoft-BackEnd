@@ -1,0 +1,16 @@
+django
+djangorestframework
+djangorestframework_simplejwt
+python-dotenv
+psycopg2-binary
+requests
+celery
+redis
+channels
+channels_redis
+django-cors-headers
+django-filter
+django-storages
+python-decouple
+whitenoise
+drf_yasg
